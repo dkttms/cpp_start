@@ -2,6 +2,8 @@
 #include <cmath>
 #include <algorithm>
 #include <iomanip>
+#include <vector>
+
 
 void swap(int& a, int& b){
     int temp = a;
@@ -12,10 +14,12 @@ void swap(int& a, int& b){
 
 
 int main() {
-    int a;
-    int b;
-    std::cin >> a >> b;
-    swap(a,b);
-    std::cout << a << " " << b << "\n";
+    std::vector<int> nums;
+    int x;
+    while (std::cin >> x) nums.push_back(x);
+
+    auto max = std::max_element(nums.begin(), nums.end());
+
+    std::cout << *max << "\n";
     return 0;
 }
