@@ -3,8 +3,9 @@
 #include <algorithm>
 
 int main() {
-    std::string s = "hello";
-    std:: string r(s.rbegin(), s.rend());
-    std::cout << r << "\n";
+    std::string s;
+    std:: getline(std::cin, s);
+    std::reverse(s.begin(), s.end());
+    std::cout << s << "\n";
     return 0;
 }
