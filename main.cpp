@@ -5,6 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <unordered_set>
+#include <numeric>
 
 void swap(int& a, int& b){
     int temp = a;
@@ -15,12 +16,15 @@ void swap(int& a, int& b){
 
 
 int main() {
-    std::string line;
-    std::getline(std::cin, line);
-    std::unordered_set<std::string> seen;
-    std::istringstream iss(line);
-    std::string word;
-    while (iss >> word) seen.insert(word);
-    std::cout << seen.size() << "\n";
+    std::vector<long long> nums;
+    long long y;
+    while (std::cout << y){
+        nums.push_back(y);
+    }
+    std::accumulate(nums.begin(),nums.end(), 0LL, 
+    [](long long acc, int x){ 
+        return x % 2 == 0 ? acc + 1LL * x * x : acc;
+    }
+    );
     return 0;
 }
