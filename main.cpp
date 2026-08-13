@@ -3,13 +3,14 @@
 #include <algorithm>
 #include <iomanip>
 
+int square(int n){
+    return n*n;
+}
+
+
 int main() {
     int n;
     std::cin >> n;
-    long long total = 0;
-    for (int i = 1; i <= n; i++){
-        total += i;
-    }
-    std::cout << total << "\n";
+    std::cout << square(n) << "\n";
     return 0;
 }
