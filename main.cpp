@@ -17,9 +17,9 @@ void swap(int& a, int& b){
 
 int main() {
     std::vector<long long> nums;
-    long long y;
-    while (std::cout << y){
-        nums.push_back(y);
+    long long x;
+    while (std::cout << x){
+        nums.push_back(x);
     }
     std::accumulate(nums.begin(),nums.end(), 0LL, 
     [](long long acc, int x){ 
