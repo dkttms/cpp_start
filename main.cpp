@@ -4,10 +4,19 @@
 #include <iomanip>
 
 int main() {
-    std::string name;
-    int age;
-    std::getline(std::cin, name);
-    std:: cin >> age;
-    std::cout << "Hi, " << name << "! " << "You are " << age << " years old.\n";
+    int number;
+    std::cin >> number;
+    if ((number % 15) == 0){
+        std::cout << "FizzBuzz" << "\n";
+    }
+    else if ((number % 3 ) == 0){
+        std::cout << "Fizz" << "\n";
+    }
+    else if ((number % 5 ) == 0){
+        std::cout << "Buzz" << "\n";
+    }
+    else {
+        std::cout << number << "\n";
+    }
     return 0;
 }
