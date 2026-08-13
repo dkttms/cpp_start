@@ -23,7 +23,7 @@ int main() {
     }
     std::accumulate(nums.begin(),nums.end(), 0LL, 
     [](long long acc, int x){ 
-        return x % 2 == 0 ? acc + 1LL * x * x : acc;
+        return x % 2 == 0 ? x * x : acc;
     }
     );
     return 0;
