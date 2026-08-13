@@ -18,13 +18,14 @@ void swap(int& a, int& b){
 int main() {
     std::vector<long long> nums;
     long long x;
-    while (std::cout << x){
+    while (std::cin >> x){
         nums.push_back(x);
     }
-    std::accumulate(nums.begin(),nums.end(), 0LL, 
+    long long sum = std::accumulate(nums.begin(),nums.end(), 0LL, 
     [](long long acc, int x){ 
-        return x % 2 == 0 ? x * x : acc;
+        return x % 2 == 0 ? acc + x * x : acc;
     }
     );
+    std::cout << sum << "\n";
     return 0;
 }
