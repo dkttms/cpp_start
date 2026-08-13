@@ -4,19 +4,12 @@
 #include <iomanip>
 
 int main() {
-    int number;
-    std::cin >> number;
-    if ((number % 15) == 0){
-        std::cout << "FizzBuzz" << "\n";
+    int n;
+    std::cin >> n;
+    long long total = 0;
+    for (int i = 1; i <= n; i++){
+        total += i;
     }
-    else if ((number % 3 ) == 0){
-        std::cout << "Fizz" << "\n";
-    }
-    else if ((number % 5 ) == 0){
-        std::cout << "Buzz" << "\n";
-    }
-    else {
-        std::cout << number << "\n";
-    }
+    std::cout << total << "\n";
     return 0;
 }
